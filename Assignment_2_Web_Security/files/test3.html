@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>Add blog post : Elgg For SEED Labs</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="alternative" type="application/rss+xml" title="RSS" href="http://www.seed-server.com/blog/add/56?view=rss" />
+        <link rel="apple-touch-icon" href="http://www.seed-server.com/cache/1587931381/default/graphics/favicon-128.png" />
+        <link rel="icon" href="http://www.seed-server.com/cache/1587931381/default/graphics/favicon.ico" />
+        <link rel="icon" sizes="16x16 32x32 48x48 64x64 128x128" type="image/svg+xml" href="http://www.seed-server.com/cache/1587931381/default/graphics/favicon.svg" />
+        <link rel="icon" sizes="16x16" type="image/png" href="http://www.seed-server.com/cache/1587931381/default/graphics/favicon-16.png" />
+        <link rel="icon" sizes="32x32" type="image/png" href="http://www.seed-server.com/cache/1587931381/default/graphics/favicon-32.png" />
+        <link rel="icon" sizes="64x64" type="image/png" href="http://www.seed-server.com/cache/1587931381/default/graphics/favicon-64.png" />
+        <link rel="icon" sizes="128x128" type="image/png" href="http://www.seed-server.com/cache/1587931381/default/graphics/favicon-128.png" />
+        <link rel="manifest" href="http://www.seed-server.com/cache/1587931381/default/resources/manifest.json" />
+        <link rel="stylesheet" href="http://www.seed-server.com/cache/1587931381/default/font-awesome/css/all.min.css" />
+        <link rel="stylesheet" href="http://www.seed-server.com/cache/1587931381/default/elgg.css" />
+        <script>
+            require = function () {
+                // handled in the view "elgg.js"
+                _require_queue.push(arguments);
+            };
+            _require_queue = [];
+        </script>
+    </head>
+    <body>
+        <div class="elgg-page elgg-page-default">
+            <div class="elgg-page-section elgg-page-messages">
+                <div class="elgg-inner">
+                    <ul class="elgg-system-messages">
+                        <li class="hidden"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="elgg-page-section elgg-page-topbar">
+                <div class="elgg-inner">
+                    <div class="elgg-nav-logo">
+                        <h1 class="elgg-heading-site">
+                            <a href="http://www.seed-server.com/" class="elgg-anchor"><span class="elgg-anchor-label">Elgg For SEED Labs</span></a>
+                        </h1>
+                    </div>
+
+                    <div class="elgg-nav-button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="elgg-nav-collapse">
+                        <div class="elgg-nav-search">
+                            <form method="get" action="http://www.seed-server.com/search" class="elgg-form elgg-search elgg-form-search elgg-form-prevent-double-submit">
+                                <fieldset>
+                                    <div class="elgg-field elgg-field-required">
+                                        <div class="elgg-field-input">
+                                            <input value="" type="text" class="elgg-input-text search-input" size="21" name="q" autocapitalize="off" autocorrect="off" required="required" placeholder="Search" id="elgg-field-jukg3m" />
+                                        </div>
+                                    </div>
+                                    <div class="elgg-field">
+                                        <div class="elgg-field-input">
+                                            <button value='&lt;span class="elgg-icon elgg-icon-search fas fa-search"&gt;&lt;/span&gt;' id="elgg-field-94hdl6" type="submit" class="elgg-button elgg-button-submit">
+                                                <span class="elgg-button-label"><span class="elgg-icon elgg-icon-search fas fa-search"></span></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <input name="search_type" value="all" type="hidden" />
+                                </fieldset>
+                            </form>
+                        </div>
+                        <nav class="elgg-menu-container elgg-menu-site-container" data-menu-name="site">
+                            <ul class="elgg-menu elgg-menu-site elgg-menu-site-default" data-menu-section="default">
+                                <li data-menu-item="blog" class="elgg-menu-item-blog elgg-state-selected">
+                                    <a href="http://www.seed-server.com/blog/all" class="elgg-anchor elgg-menu-content">
+                                        <span class="elgg-icon elgg-icon-pencil-square-o elgg-anchor-icon far fa-edit"></span><span class="elgg-anchor-label">Blogs</span>
+                                    </a>
+                                </li>
+                                <li data-menu-item="bookmarks" class="elgg-menu-item-bookmarks">
+                                    <a href="http://www.seed-server.com/bookmarks" class="elgg-anchor elgg-menu-content">
+                                        <span class="elgg-icon elgg-icon-bookmark-o elgg-anchor-icon far fa-bookmark"></span><span class="elgg-anchor-label">Bookmarks</span>
+                                    </a>
+                                </li>
+                                <li data-menu-item="file" class="elgg-menu-item-file">
+                                    <a href="http://www.seed-server.com/file" class="elgg-anchor elgg-menu-content">
+                                        <span class="elgg-icon elgg-icon-files-o elgg-anchor-icon far fa-copy"></span><span class="elgg-anchor-label">Files</span>
+                                    </a>
+                                </li>
+                                <li data-menu-item="groups" class="elgg-menu-item-groups">
+                                    <a href="http://www.seed-server.com/groups/all" class="elgg-anchor elgg-menu-content">
+                                        <span class="elgg-icon elgg-icon-users elgg-anchor-icon fas fa-users"></span><span class="elgg-anchor-label">Groups</span>
+                                    </a>
+                                </li>
+                                <li data-menu-item="members" class="elgg-menu-item-members">
+                                    <a href="http://www.seed-server.com/members" class="elgg-anchor elgg-menu-content">
+                                        <span class="elgg-icon elgg-icon-address-book-o elgg-anchor-icon far fa-address-book"></span><span class="elgg-anchor-label">Members</span>
+                                    </a>
+                                </li>
+                                <li data-menu-item="more" class="elgg-menu-item-more">
+                                    <a href="javascript:void(0);" class="elgg-anchor elgg-menu-content elgg-menu-closed elgg-menu-parent elgg-non-link">
+                                        <span class="elgg-anchor-label">More</span><span class="elgg-icon elgg-icon-angle-down elgg-anchor-icon-alt fas fa-angle-down"></span>
+                                    </a>
+                                    <ul class="elgg-menu elgg-child-menu">
+                                        <li data-menu-item="pages" class="elgg-menu-item-pages">
+                                            <a href="http://www.seed-server.com/pages" class="elgg-anchor elgg-menu-content">
+                                                <span class="elgg-icon elgg-icon-file-text-o elgg-anchor-icon far fa-file-alt"></span><span class="elgg-anchor-label">Pages</span>
+                                            </a>
+                                        </li>
+                                        <li data-menu-item="thewire" class="elgg-menu-item-thewire">
+                                            <a href="http://www.seed-server.com/thewire/all" class="elgg-anchor elgg-menu-content">
+                                                <span class="elgg-icon elgg-icon-comments-o elgg-anchor-icon far fa-comments"></span><span class="elgg-anchor-label">The Wire</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav class="elgg-menu-container elgg-menu-topbar-container" data-menu-name="topbar">
+                            <ul class="elgg-menu elgg-menu-topbar elgg-menu-topbar-alt" data-menu-section="alt">
+                                <li data-menu-item="account" class="elgg-menu-item-account">
+                                    <a href="http://www.seed-server.com/profile/alice" class="elgg-anchor elgg-menu-content elgg-avatar-small elgg-menu-closed elgg-menu-parent">
+                                        <img src="http://www.seed-server.com/serve-file/e0/l1587929076/di/c0/IoO2MGy_sHCEfY12-h84zpfPuCz9eiYRi640ClfhDtI/1/56/profile/56small.jpg" alt="Alice" /><span class="elgg-anchor-label">Account</span>
+                                        <span class="elgg-icon elgg-icon-angle-down elgg-anchor-icon-alt fas fa-angle-down"></span>
+                                    </a>
+                                    <ul class="elgg-menu elgg-child-menu">
+                                        <li data-menu-item="profile" class="elgg-menu-item-profile">
+                                            <a href="http://www.seed-server.com/profile/alice" class="elgg-anchor elgg-menu-content">
+                                                <span class="elgg-icon elgg-icon-user elgg-anchor-icon fas fa-user"></span><span class="elgg-anchor-label">Profile</span>
+                                            </a>
+                                        </li>
+                                        <li data-menu-item="usersettings" class="elgg-menu-item-usersettings">
+                                            <a href="http://www.seed-server.com/settings/user/alice" class="elgg-anchor elgg-menu-content">
+                                                <span class="elgg-icon elgg-icon-sliders elgg-anchor-icon fas fa-sliders-h"></span><span class="elgg-anchor-label">Settings</span>
+                                            </a>
+                                        </li>
+                                        <li data-menu-item="friends" class="elgg-menu-item-friends">
+                                            <a href="http://www.seed-server.com/friends/alice" title="Friends" class="elgg-anchor elgg-menu-content">
+                                                <span class="elgg-icon elgg-icon-users elgg-anchor-icon fas fa-users"></span><span class="elgg-anchor-label">Friends</span>
+                                            </a>
+                                        </li>
+                                        <li data-menu-item="logout" class="elgg-menu-item-logout">
+                                            <a href="http://www.seed-server.com/action/logout?__elgg_ts=1707496248&amp;__elgg_token=cZ9IO6z42uQqjPJpL8KGfA" class="elgg-anchor elgg-menu-content">
+                                                <span class="elgg-icon elgg-icon-sign-out elgg-anchor-icon fas fa-sign-out-alt"></span><span class="elgg-anchor-label">Log out</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="elgg-menu elgg-menu-topbar elgg-menu-topbar-default" data-menu-section="default">
+                                <li data-menu-item="messages" class="elgg-menu-item-messages">
+                                    <a href="http://www.seed-server.com/messages/inbox/alice" title="Messages" class="elgg-anchor elgg-menu-content">
+                                        <span class="elgg-icon elgg-icon-mail elgg-anchor-icon far fa-envelope"></span><span class="elgg-anchor-label">Messages</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="elgg-page-section elgg-page-body">
+                <div class="elgg-inner">
+                    <div class="elgg-layout clearfix elgg-layout-one-sidebar">
+                        <div class="elgg-layout-breadcrumbs clearfix">
+                            <nav class="elgg-menu-container elgg-menu-breadcrumbs-container" data-menu-name="breadcrumbs">
+                                <ul class="elgg-menu elgg-menu-breadcrumbs elgg-breadcrumbs elgg-menu-hz elgg-menu-breadcrumbs-default" data-menu-section="default">
+                                    <li data-menu-item="0" class="elgg-menu-item-0">
+                                        <a href="http://www.seed-server.com/profile/alice" class="elgg-anchor elgg-menu-content"><span class="elgg-anchor-label">Alice</span></a>
+                                    </li>
+                                    <li data-menu-item="1" class="elgg-menu-item-1">
+                                        <a href="http://www.seed-server.com/blog/owner/alice" class="elgg-anchor elgg-menu-content"><span class="elgg-anchor-label">Blogs</span></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="elgg-head elgg-layout-header">
+                            <h2 class="elgg-heading-main">Add blog post</h2>
+                        </div>
+                        <div class="elgg-layout-columns">
+                            <div class="elgg-main elgg-body elgg-layout-body clearfix">
+                                <div class="elgg-layout-content clearfix">
+                                    <form method="post" action="http://www.seed-server.com/action/blog/save" guid="56" class="elgg-form elgg-form-blog-save" enctype="multipart/form-data">
+                                        <fieldset>
+                                            <input name="__elgg_token" value="cZ9IO6z42uQqjPJpL8KGfA" type="hidden" /><input name="__elgg_ts" value="1707496248" type="hidden" />
+                                            <div class="elgg-field elgg-field-required">
+                                                <label for="blog_title" class="elgg-field-label">Title<span title="Required" class="elgg-required-indicator">&ast;</span></label>
+                                                <div class="elgg-field-input"><input type="text" name="title" required="required" id="blog_title" class="elgg-input-text" /></div>
+                                            </div>
+                                            <div class="elgg-field">
+                                                <label for="blog_excerpt" class="elgg-field-label">Excerpt</label>
+                                                <div class="elgg-field-input"><input value="" type="text" name="excerpt" id="blog_excerpt" class="elgg-input-text" /></div>
+                                            </div>
+                                            <div class="elgg-field elgg-field-required">
+                                                <label for="blog_description" class="elgg-field-label">Body<span title="Required" class="elgg-required-indicator">&ast;</span></label>
+                                                <div class="elgg-field-input">
+                                                    <nav class="elgg-menu-container elgg-menu-longtext-container" data-menu-name="longtext">
+                                                        <ul class="elgg-menu elgg-menu-longtext elgg-menu-hz elgg-menu-longtext-default" data-menu-section="default">
+                                                            <li data-menu-item="embed" class="elgg-menu-item-embed">
+                                                                <a
+                                                                    href="javascript:void(0);"
+                                                                    data-colorbox-opts='{"href":"http:\/\/www.seed-server.com\/embed"}'
+                                                                    rel="embed-lightbox-blog_description"
+                                                                    class="elgg-anchor elgg-menu-content elgg-longtext-control elgg-lightbox embed-control embed-control-blog_description elgg-lightbox elgg-non-link"
+                                                                >
+                                                                    <span class="elgg-anchor-label">Embed content</span>
+                                                                </a>
+                                                            </li>
+                                                            <li data-menu-item="ckeditor_toggler" class="elgg-menu-item-ckeditor-toggler">
+                                                                <a href="#blog_description" class="elgg-anchor elgg-menu-content ckeditor-toggle-editor elgg-longtext-control hidden"><span class="elgg-anchor-label">Edit HTML</span></a>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                    <textarea
+                                                        rows="10"
+                                                        cols="50"
+                                                        id="blog_description"
+                                                        name="description"
+                                                        required="required"
+                                                        class="elgg-input-longtext"
+                                                        data-editor-opts='{"disabled":false,"state":"visual","required":true}'
+                                                    ></textarea>
+                                                    <script>
+                                                        require(["elgg-ckeditor"], function (elggCKEditor) {
+                                                            elggCKEditor.bind("#blog_description", "elgg/ckeditor/config");
+                                                        });
+                                                    </script>
+                                                </div>
+                                            </div>
+                                            <div class="elgg-field">
+                                                <label for="blog_tags" class="elgg-field-label">Tags</label>
+                                                <div class="elgg-field-input"><input autocapitalize="off" type="text" name="tags" id="blog_tags" class="elgg-input-tags" /></div>
+                                            </div>
+                                            <div class="elgg-field">
+                                                <label for="blog_comments_on" class="elgg-field-label">Comments</label>
+                                                <div class="elgg-field-input">
+                                                    <select name="comments_on" id="blog_comments_on" class="elgg-input-dropdown elgg-input-select">
+                                                        <option value="On" selected="selected" title="On">On</option>
+                                                        <option value="Off" title="Off">Off</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="elgg-field">
+                                                <label for="blog_access_id" class="elgg-field-label">Who can see this</label>
+                                                <div class="elgg-field-input">
+                                                    <select name="access_id" id="blog_access_id" class="elgg-input-dropdown elgg-input-select elgg-input-access">
+                                                        <option value="0" title="Private">Private</option>
+                                                        <option value="4" title="Friends">Friends</option>
+                                                        <option value="1" title="Logged in users">Logged in users</option>
+                                                        <option value="2" selected="selected" title="Public">Public</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="elgg-field">
+                                                <label for="blog_status" class="elgg-field-label">Status</label>
+                                                <div class="elgg-field-input">
+                                                    <select name="status" id="blog_status" class="elgg-input-dropdown elgg-input-select">
+                                                        <option value="draft" title="Draft">Draft</option>
+                                                        <option value="published" selected="selected" title="Published">Published</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <input name="container_guid" value="56" type="hidden" /><input name="guid" type="hidden" />
+                                            <div class="elgg-foot elgg-form-footer">
+                                                <div class="elgg-subtext mbm">Last saved: <span class="blog-save-status-time">Never</span></div>
+                                                <button value="Save" name="save" type="submit" class="elgg-button elgg-button-submit"><span class="elgg-button-label">Save</span></button>
+                                                <button value="Preview" name="preview" class="elgg-button elgg-button-submit mls elgg-button-submit" type="submit"><span class="elgg-button-label">Preview</span></button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="elgg-sidebar elgg-layout-sidebar clearfix">
+                                <div class="elgg-module elgg-owner-block elgg-module-info">
+                                    <div class="elgg-head">
+                                        <div data-guid="56" class="elgg-image-block clearfix elgg-chip">
+                                            <div class="elgg-image">
+                                                <div class="elgg-avatar elgg-avatar-small elgg-avatar-menu">
+                                                    <ul
+                                                        rel="wvcYCzsdc_bpXjopa2nBgg2Hmj4KOomlqI0DmZmQnxU"
+                                                        class="elgg-menu elgg-menu-hover"
+                                                        data-menu-placeholder="1"
+                                                        data-elgg-menu-data='{"g":56,"pog":56,"c":["blog","owner_block"],"m":"wvcYCzsdc_bpXjopa2nBgg2Hmj4KOomlqI0DmZmQnxU","i":[]}'
+                                                    ></ul>
+                                                    <a href="http://www.seed-server.com/profile/alice" class="elgg-anchor">
+                                                        <span class="elgg-anchor-label">
+                                                            <img src="http://www.seed-server.com/serve-file/e0/l1587929076/di/c0/IoO2MGy_sHCEfY12-h84zpfPuCz9eiYRi640ClfhDtI/1/56/profile/56small.jpg" alt="Alice" title="Alice" />
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="elgg-body">
+                                                <h3 class="elgg-listing-summary-title">
+                                                    <a href="http://www.seed-server.com/profile/alice" class="elgg-anchor"><span class="elgg-anchor-label">Alice</span></a>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elgg-body">
+                                        <nav class="elgg-menu-container elgg-menu-owner-block-container" data-menu-name="owner_block">
+                                            <ul class="elgg-menu elgg-menu-owner-block elgg-menu-owner-block-default" data-menu-section="default">
+                                                <li data-menu-item="blog" class="elgg-menu-item-blog">
+                                                    <a href="http://www.seed-server.com/blog/owner/alice" class="elgg-anchor elgg-menu-content"><span class="elgg-anchor-label">Blogs</span></a>
+                                                </li>
+                                                <li data-menu-item="bookmarks" class="elgg-menu-item-bookmarks">
+                                                    <a href="http://www.seed-server.com/bookmarks/owner/alice" class="elgg-anchor elgg-menu-content"><span class="elgg-anchor-label">Bookmarks</span></a>
+                                                </li>
+                                                <li data-menu-item="file" class="elgg-menu-item-file">
+                                                    <a href="http://www.seed-server.com/file/owner/alice" class="elgg-anchor elgg-menu-content"><span class="elgg-anchor-label">Files</span></a>
+                                                </li>
+                                                <li data-menu-item="pages" class="elgg-menu-item-pages">
+                                                    <a href="http://www.seed-server.com/pages/owner/alice" class="elgg-anchor elgg-menu-content"><span class="elgg-anchor-label">Pages</span></a>
+                                                </li>
+                                                <li data-menu-item="thewire" class="elgg-menu-item-thewire">
+                                                    <a href="http://www.seed-server.com/thewire/owner/alice" class="elgg-anchor elgg-menu-content"><span class="elgg-anchor-label">Wire post</span></a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elgg-page-section elgg-page-footer">
+                <div class="elgg-inner">
+                    <nav class="elgg-menu-container elgg-menu-footer-container" data-menu-name="footer">
+                        <ul class="elgg-menu elgg-menu-footer elgg-menu-footer-default" data-menu-section="default">
+                            <li data-menu-item="rss" class="elgg-menu-item-rss">
+                                <a href="http://www.seed-server.com/blog/add/56?view=rss" title="RSS feed for this page" class="elgg-anchor elgg-menu-content">
+                                    <span class="elgg-icon elgg-icon-rss elgg-anchor-icon fas fa-rss-square"></span><span class="elgg-anchor-label">RSS</span>
+                                </a>
+                            </li>
+                            <li data-menu-item="bookmark" class="elgg-menu-item-bookmark">
+                                <a href="http://www.seed-server.com/bookmarks/add/56?address=http%3A//www.seed-server.com/blog/add/56" title="Bookmark this page" rel="nofollow" class="elgg-anchor elgg-menu-content">
+                                    <span class="elgg-icon elgg-icon-push-pin-alt elgg-anchor-icon fas fa-thumbtack"></span><span class="elgg-anchor-label">Bookmark this page</span>
+                                </a>
+                            </li>
+                            <li data-menu-item="report_this" class="elgg-menu-item-report-this">
+                                <a href="http://www.seed-server.com/ajax/form/reportedcontent/add" title="Report this page to an administrator" class="elgg-anchor elgg-menu-content elgg-lightbox">
+                                    <span class="elgg-icon elgg-icon-exclamation-triangle elgg-anchor-icon fas fa-exclamation-triangle"></span><span class="elgg-anchor-label">Report this</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="elgg-menu elgg-menu-footer elgg-menu-footer-meta" data-menu-section="meta">
+                            <li data-menu-item="powered" class="elgg-menu-item-powered">
+                                <a href="http://elgg.org" title="Elgg 3.3.3" class="elgg-anchor elgg-menu-content"><span class="elgg-anchor-label">Powered by Elgg</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <script>
+            /**
+             * Inline (non-jQuery) script to prevent clicks on links that require some later loaded js to function
+             *
+             * @since 3.3
+             */
+
+            var lightbox_links = document.getElementsByClassName("elgg-lightbox");
+
+            for (var i = 0; i < lightbox_links.length; i++) {
+                lightbox_links[i].onclick = function () {
+                    return false;
+                };
+            }
+
+            var toggle_links = document.querySelectorAll('a[rel="toggle"]');
+
+            for (var i = 0; i < toggle_links.length; i++) {
+                toggle_links[i].onclick = function () {
+                    return false;
+                };
+            }
+
+            var elgg = {
+                config: { lastcache: 1587931381, viewtype: "default", simplecache_enabled: 1, current_language: "en" },
+                security: { token: { __elgg_ts: 1707496248, __elgg_token: "cZ9IO6z42uQqjPJpL8KGfA" } },
+                session: {
+                    user: {
+                        guid: 56,
+                        type: "user",
+                        subtype: "user",
+                        owner_guid: 56,
+                        container_guid: 0,
+                        time_created: "2020-04-26T15:21:41-04:00",
+                        time_updated: "2024-02-09T11:26:48-05:00",
+                        url: "http:\/\/www.seed-server.com\/profile\/alice",
+                        name: "Alice",
+                        username: "alice",
+                        language: "en",
+                        admin: false,
+                    },
+                    token: "yz_3ZG6rDTsQng1PRMAozk",
+                },
+                _data: {},
+                page_owner: {
+                    guid: 56,
+                    type: "user",
+                    subtype: "user",
+                    owner_guid: 56,
+                    container_guid: 0,
+                    time_created: "2020-04-26T15:21:41-04:00",
+                    time_updated: "2024-02-09T11:26:48-05:00",
+                    url: "http:\/\/www.seed-server.com\/profile\/alice",
+                    name: "Alice",
+                    username: "alice",
+                    language: "en",
+                },
+            };
+        </script>
+        <script src="http://www.seed-server.com/cache/1587931381/default/jquery.js"></script>
+        <script src="http://www.seed-server.com/cache/1587931381/default/jquery-ui.js"></script>
+        <script src="http://www.seed-server.com/cache/1587931381/default/elgg/require_config.js"></script>
+        <script src="http://www.seed-server.com/cache/1587931381/default/require.js"></script>
+        <script src="http://www.seed-server.com/cache/1587931381/default/elgg.js"></script>
+        <script>
+            require(["elgg/blog/save_draft", "elgg/embed", "input/form", "page/elements/topbar", "elgg/reportedcontent"]);
+        </script>
+    </body>
+</html>

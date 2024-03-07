@@ -1,0 +1,17 @@
+sudo sysctl -w kernel.randomize_va_space=0
+sudo ln -sf /bin/zsh /bin/sh
+
+
+gcc -m32 -o b2 -z execstack -fno-stack-protector b2.c
+sudo chown root stack
+sudo chmod 4755 stack
+
+
+touch badfile
+gcc -o b2_dbg -g -z execstack -fno-stack-protector b2.c
+
+
+scp -i .\SEED-VM_key.pem .\b2.c seed@20.0.193.237:/home/seed/Downloads/1905113
+
+"\xBB\x86\x62\x55\x56\x6A\x01\x31\xC9\x51\xFF\xD3\x6A\x09\x50\xFF\xD3\x31\xC9\x51\x50\xFF\xD3\x6A\x05\x50\xFF\xD3\x6A\x01\x50\xFF\xD3\x6A\x01\x50\xFF\xD3\x6A\x03\x50\xFF\xD3"
+
